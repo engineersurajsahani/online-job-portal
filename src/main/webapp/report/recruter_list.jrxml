@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="recruter_list" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0d7a75c3-0e3e-4c70-a054-093c56b83e47">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     r_signup.`r_id` AS r_signup_r_id,
+     r_signup.`fullname` AS r_signup_fullname,
+     r_signup.`companyname` AS r_signup_companyname,
+     r_signup.`email` AS r_signup_email,
+     r_signup.`password` AS r_signup_password,
+     r_signup.`gender` AS r_signup_gender,
+     r_signup.`phone_no` AS r_signup_phone_no,
+     r_signup.`address` AS r_signup_address,
+     r_signup.`photo` AS r_signup_photo
+FROM
+     `r_signup` r_signup]]>
+	</queryString>
+	<field name="r_signup_r_id" class="java.lang.Integer"/>
+	<field name="r_signup_fullname" class="java.lang.String"/>
+	<field name="r_signup_companyname" class="java.lang.String"/>
+	<field name="r_signup_email" class="java.lang.String"/>
+	<field name="r_signup_password" class="java.lang.String"/>
+	<field name="r_signup_gender" class="java.lang.String"/>
+	<field name="r_signup_phone_no" class="java.lang.Long"/>
+	<field name="r_signup_address" class="java.lang.String"/>
+	<field name="r_signup_photo" class="java.lang.String"/>
+	<group name="r_signup_r_id">
+		<groupExpression><![CDATA[$F{r_signup_r_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="79" uuid="e857a6c0-3d29-4a99-9ea2-96c1c48a0e33"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="346" y="32" width="100" height="20" uuid="71674a8c-520e-47d8-954a-99aff9e01fc8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recruiter List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="16" width="802" height="1" uuid="683d9415-9e19-4c21-aa8b-ba7e1ec4b23b"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="afac8719-558a-4205-8f37-4b627731333c"/>
+				<text><![CDATA[R_Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="00f9383a-1f38-4cfa-ab9d-aca3863d9ebf"/>
+				<text><![CDATA[R_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="dbe6cd1f-8e10-4ab5-abb5-ac7061e36d1e"/>
+				<text><![CDATA[R_Phone_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="1c27d4ea-2f8f-45b1-9dd9-a214661a0bb7"/>
+				<text><![CDATA[R_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="613d64be-d91f-4254-9234-538f05b181f3"/>
+				<text><![CDATA[R_Fullname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="0" width="90" height="20" uuid="c9409f9a-5478-498a-b36d-38d3fd895472"/>
+				<text><![CDATA[R_Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="710" y="0" width="88" height="20" uuid="668fbef6-7183-4641-9751-c76e37a9e53b"/>
+				<text><![CDATA[R_Companyname]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="33" width="802" height="1" uuid="5e6f2d4d-295f-4c8d-80df-f585b3aa7f73"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="72" height="20" uuid="c7ed111b-cad3-498f-b08b-1978d0fbd776"/>
+				<textFieldExpression><![CDATA[$F{r_signup_r_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="114" height="20" uuid="67904b87-6375-4738-8f67-b9163151712f"/>
+				<textFieldExpression><![CDATA[$F{r_signup_phone_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="63d6634c-536d-4176-b09a-bd1d078917d5"/>
+				<textFieldExpression><![CDATA[$F{r_signup_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="0" width="114" height="20" uuid="7ee24973-5433-4865-a1d5-2a4913a56d60"/>
+				<textFieldExpression><![CDATA[$F{r_signup_fullname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="594" y="0" width="90" height="20" uuid="fc000d28-8e25-48a1-9cda-416c5b7dd334"/>
+				<textFieldExpression><![CDATA[$F{r_signup_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="710" y="0" width="88" height="20" uuid="1e490a5c-9daa-4b01-85d0-4a44c153389b"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{r_signup_companyname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="0" width="114" height="20" uuid="833f6fbd-7fd7-4e0e-bfc2-fe94aa30325b"/>
+				<textFieldExpression><![CDATA[$F{r_signup_email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>

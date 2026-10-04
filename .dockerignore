@@ -1,0 +1,9 @@
+.git
+.gitignore
+.settings
+.classpath
+.project
+build
+tools
+1NPDPRO5.DOC
+*.md

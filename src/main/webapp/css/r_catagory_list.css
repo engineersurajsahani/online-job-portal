@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+/* Status */
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.inactive {
+    color: red;
+    font-weight: bold;
+}
+
+
+.btn 
+{
+	height: 40px;
+	width: 100px;
+	background-color: green;
+	
+}
+
+.img
+{
+	height: 100px;
+	width: 100px;
+}
+

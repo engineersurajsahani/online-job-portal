@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+}
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Search Box */
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"],
+.search-box input[type="date"] {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #1a252f;
+}
+
+/* Table */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #2c3e50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #e6f2ff;
+}
+
+/* Status Badges */
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.scheduled { background: #f39c12; }
+.completed { background: #27ae60; }
+.cancelled { background: #e74c3c; }
+
+/* Buttons */
+.btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.view {
+    background: #3498db;
+    color: white;
+}
+
+.cancel {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

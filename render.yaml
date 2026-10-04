@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: online-job-portal
+    runtime: docker
+    plan: starter          # disk needs a paid plan; see DEPLOY.md for free-plan option
+    healthCheckPath: /index.jsp
+    disk:
+      name: jobportal-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: SQLITE_DB_PATH
+        value: /data/online_job_portal.db
+      - key: ADMIN_USERNAME
+        sync: false        # set in Render dashboard (default: Omkar)
+      - key: ADMIN_PASSWORD
+        sync: false        # set in Render dashboard (default: 82081)
+      - key: MAIL_USERNAME
+        sync: false        # optional override for SendMail credentials
+      - key: MAIL_PASSWORD
+        sync: false        # optional override for SendMail credentials

@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+body{
+	background-image:url("images/ragister.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+
+.formcontainer{
+	width:350px;
+	border-radius:10px;
+	padding:15px;
+	margin:50px 0 0 550px;
+	background-color:rgba(0,0,0,0.7);
+}
+
+h4{
+	color:white;
+	font-size:30px;
+	text-align:center;
+	margin-top:-3px;
+	margin-bottom:-1px;
+}
+ 
+ label{
+ width:100%;
+ color:white;
+ font-size:18px;
+ margin-top:-10px;
+ }
+ 
+ 
+ input{
+  width: 96%;
+  padding: 2px;
+  border:none;
+  font-size: 16px;
+  background: transparent;  
+      border-bottom: 2px solid #ccc;    
+    margin-bottom:10px;
+  color:white;
+ }
+ 
+ input::placeholder {
+  color: white;  
+  opacity:0.4;  
+}
+input[type="submit"]{
+	border:2px solid;
+}
+input[type="reset"]{
+	border:2px solid;
+}
+input:focus {
+  outline: none;
+  
+}
+
+ select {
+  width: 96%;
+  border: none;
+  font-size: 16px;
+  background: transparent;      
+  border-bottom: 2px solid #ccc;  
+  margin-bottom: 20px;
+  color: white;                  
+}
+
+select option[disabled] {
+  color: rgba(255, 255, 255, 0.4);  
+}
+
+select option {
+  background: #222;   
+  color: #fff;       
+}
+
+
+select:focus {
+  outline: none;
+}
+
+
+
+button {
+ margin: 10px 0  0 20px;
+ width: 9em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+button::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+button:hover::before {
+ width: 9em;
+}
+
+.primary-btn {
+  background-color: #4CAF50; 
+  color: white;              
+  border: none;              
+  padding: 10px 20px;        
+  font-size: 16px;           
+  border-radius: 5px;        
+  cursor: pointer;          
+  width:50%;
+}
+
+
+.primary-btn:hover {
+  background-color: #45a049;
+}
+a{
+	color: red;
+}
+p{
+	text-align:center;
+	color:white;
+	text-decoration:underline;
+}

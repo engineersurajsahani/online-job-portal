@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_wise_job_list" language="groovy" pageWidth="900" pageHeight="595" orientation="Landscape" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4889611e-457d-4550-86bf-aa7d559633dc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     r_add_job.`job_id` AS r_add_job_job_id,
+     r_add_job.`category` AS r_add_job_category,
+     r_add_job.`jobtitle` AS r_add_job_jobtitle,
+     r_add_job.`companyname` AS r_add_job_companyname,
+     r_add_job.`JobType` AS r_add_job_JobType,
+     r_add_job.`position` AS r_add_job_position,
+     r_add_job.`Experience` AS r_add_job_Experience,
+     r_add_job.`Qualification` AS r_add_job_Qualification,
+     r_add_job.`location` AS r_add_job_location,
+     r_add_job.`salary` AS r_add_job_salary,
+     r_add_job.`job_discription` AS r_add_job_job_discription,
+     r_add_job.`companylogo` AS r_add_job_companylogo,
+     r_add_job.`requirement` AS r_add_job_requirement,
+     r_add_job.`job_upload_date` AS r_add_job_job_upload_date,
+     r_add_job.`r_id` AS r_add_job_r_id
+FROM
+     `r_add_job` r_add_job
+where
+
+job_id = $P{id};]]>
+	</queryString>
+	<field name="r_add_job_job_id" class="java.lang.Integer"/>
+	<field name="r_add_job_category" class="java.lang.String"/>
+	<field name="r_add_job_jobtitle" class="java.lang.String"/>
+	<field name="r_add_job_companyname" class="java.lang.String"/>
+	<field name="r_add_job_JobType" class="java.lang.String"/>
+	<field name="r_add_job_position" class="java.lang.String"/>
+	<field name="r_add_job_Experience" class="java.lang.String"/>
+	<field name="r_add_job_Qualification" class="java.lang.String"/>
+	<field name="r_add_job_location" class="java.lang.String"/>
+	<field name="r_add_job_salary" class="java.lang.String"/>
+	<field name="r_add_job_job_discription" class="java.lang.String"/>
+	<field name="r_add_job_companylogo" class="java.lang.String"/>
+	<field name="r_add_job_requirement" class="java.lang.String"/>
+	<field name="r_add_job_job_upload_date" class="java.lang.String"/>
+	<field name="r_add_job_r_id" class="java.lang.String"/>
+	<group name="r_add_job_job_id">
+		<groupExpression><![CDATA[$F{r_add_job_job_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="860" height="79" uuid="2a807089-2cb5-475a-8613-c659790d237b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="344" y="10" width="100" height="20" uuid="d1ba6f47-6a04-4335-8e17-b70bad04740f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Job List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="11" width="860" height="2" uuid="e337bc82-9839-4074-9e3c-c10262c680d4"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="35" height="20" uuid="036052b1-0f23-473c-8fca-6e1c400a9f26"/>
+				<text><![CDATA[Job_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="0" width="53" height="20" uuid="2a7c33a8-b0b1-484a-a61e-a4e0871ca9a0"/>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="0" width="42" height="20" uuid="4b0dbd97-26dd-42ab-bfe2-bb8fc18ec6c4"/>
+				<text><![CDATA[Jobtitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="74" height="20" uuid="4b6df14e-9918-46b0-b051-50211e58a716"/>
+				<text><![CDATA[CompanyName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="53" height="20" uuid="9f672140-e356-4916-ad43-20fa8385ea23"/>
+				<text><![CDATA[JobType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="0" width="53" height="20" uuid="37b157c0-2346-4fa4-b867-07bfbd76a94b"/>
+				<text><![CDATA[Position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="53" height="20" uuid="d66d6aab-74ba-4bb9-b99d-1392697e98db"/>
+				<text><![CDATA[Experience]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="0" width="61" height="20" uuid="0ba991c6-411c-4116-b2c3-7dac379a551e"/>
+				<text><![CDATA[Qualification]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="0" width="53" height="20" uuid="a6e84d21-85fa-4bb9-ab3f-08b7164aa3d0"/>
+				<text><![CDATA[Location]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="53" height="20" uuid="43a9940a-f1c9-4b81-9058-0c57d1255f50"/>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="530" y="0" width="53" height="20" uuid="3804b64a-cac4-48dd-b6e5-3f0920a5537b"/>
+				<text><![CDATA[Discription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="601" y="0" width="69" height="20" uuid="a20f2f89-e3e8-4586-a483-bdf07379c3df"/>
+				<text><![CDATA[Companylogo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="0" width="73" height="20" uuid="683a9d01-8659-48e9-b085-2a19e3161625"/>
+				<text><![CDATA[Requirement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="807" y="0" width="53" height="20" uuid="a30ba73a-d4fe-4bc0-b9c9-4686ecb7a23b"/>
+				<text><![CDATA[R_id]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="860" height="1" uuid="a97c6bac-646f-43c6-97e2-e173e0e5729a"/>
+			</line>
+			<staticText>
+				<reportElement x="743" y="0" width="64" height="20" uuid="89f4c05e-5144-43f0-a220-31613a2cea43"/>
+				<text><![CDATA[Upload_Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="35" height="20" uuid="98bcb890-398e-4c80-b53d-5f880a1f1c4c"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_job_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="0" width="53" height="20" uuid="aeaad40f-fafc-4828-b70f-dcefd822f9d3"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="53" height="20" uuid="805a8eb1-016f-458b-8d13-1d03268c1cef"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_jobtitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="53" height="20" uuid="1006edb0-0584-4df0-ae08-5dc1cf88c87c"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_companyname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="53" height="20" uuid="fc942c32-bdb9-4ba9-ae98-517bce221010"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_JobType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="0" width="53" height="20" uuid="0e038605-b1b7-4e64-84cf-e7152ac67638"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="53" height="20" uuid="7a730f92-0b7d-4bde-b1de-987ac54ef0ae"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_Experience}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="0" width="53" height="20" uuid="8c077b3a-d455-41a1-8576-2fac1137d6eb"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_Qualification}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="0" width="53" height="20" uuid="e69762d9-b545-473d-a3cf-cc844a9421f2"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_location}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="53" height="20" uuid="0070af04-4eaa-4935-9ba9-95471c40ec8b"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="530" y="0" width="53" height="20" uuid="76a41012-d5c5-4d26-a720-afed7ec78a02"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_job_discription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="0" width="69" height="20" uuid="bba1b0cd-a279-49af-83fd-47b11d86400f"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_companylogo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="670" y="0" width="73" height="20" uuid="2ac20e7b-cc55-40fb-bd9d-0a2b5518c1e2"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_requirement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="743" y="0" width="53" height="20" uuid="7304f91b-3799-4d42-b1bc-1bb41e4c5dfa"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_job_upload_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="807" y="0" width="53" height="20" uuid="b1543577-99c5-4423-a639-7f1c804b5a39"/>
+				<textFieldExpression><![CDATA[$F{r_add_job_r_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="17" splitType="Stretch"/>
+	</summary>
+</jasperReport>

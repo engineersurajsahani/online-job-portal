@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.mydiv{
+	height:auto;
+	width:400px;
+	border:2px solid black;
+	margin:50px 0 0 600px
+}
+h1{
+	text-align:center;
+}
+
+label{
+	display:block;
+	margin-left:5px;
+}
+ textarea {
+    width: 80%;
+    padding: 10px;
+    margin-left: 15px;
+    font-size: 14px;
+    margin:10px;
+}
+
+
+input[type="submit"] {
+    padding: 10px 25px;
+    margin: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+input[type="reset"] {
+    padding: 10px 25px;
+    margin: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+input[type="reset"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+input{
+	width:90%;
+	margin:10px;
+}
+
+

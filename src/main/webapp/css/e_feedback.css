@@ -1,0 +1,89 @@
+body {
+	background-image:url("images/feedback.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+    font-family: Arial, sans-serif;
+    
+}
+
+.container {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color:rgba(0,0,0,0.7);
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+     color: #ffffff;		
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  
+}
+
+input[type="submit"] {
+	  
+    display: block;        
+    margin: 15px auto;    
+    
+    background: #008000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+
+      
+}
+
+input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+button {
+ margin: 10px 0  0 125px;
+ width: 9em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+button::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+button:hover::before {
+ width: 9em;
+}
+
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contact_list" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="870a84a3-62c8-48eb-a66d-14a761de6ad8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     e_contactus.`e_id` AS e_contactus_e_id,
+     e_contactus.`name` AS e_contactus_name,
+     e_contactus.`contactnumber` AS e_contactus_contactnumber,
+     e_contactus.`email` AS e_contactus_email,
+     e_contactus.`message` AS e_contactus_message
+FROM
+     `e_contactus` e_contactus]]>
+	</queryString>
+	<field name="e_contactus_e_id" class="java.lang.Integer"/>
+	<field name="e_contactus_name" class="java.lang.String"/>
+	<field name="e_contactus_contactnumber" class="java.lang.Long"/>
+	<field name="e_contactus_email" class="java.lang.String"/>
+	<field name="e_contactus_message" class="java.lang.String"/>
+	<group name="e_contactus_e_id">
+		<groupExpression><![CDATA[$F{e_contactus_e_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="20" uuid="0ef149f5-cc50-4309-89b2-c26aae6ec2bb"/>
+				<text><![CDATA[e_contactus_e_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="160" height="20" uuid="2bd44433-d477-4a82-86b0-2605668cfb37"/>
+				<text><![CDATA[e_contactus_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="160" height="20" uuid="cefe3dff-1c98-4a8c-b8ae-f0f5ac3b4a9d"/>
+				<text><![CDATA[e_contactus_contactnumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="160" height="20" uuid="46f8abdf-92ae-4685-ad57-3a17f29afcdc"/>
+				<text><![CDATA[e_contactus_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="0" width="160" height="20" uuid="ed5513a7-9298-47ab-b951-f397d83de354"/>
+				<text><![CDATA[e_contactus_message]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="160" height="20" uuid="ae55dca2-0ae2-4d22-9ba8-696dfbf9a74f"/>
+				<textFieldExpression><![CDATA[$F{e_contactus_e_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="160" height="20" uuid="10b70909-dfd8-4842-b5f1-4d807a1ff518"/>
+				<textFieldExpression><![CDATA[$F{e_contactus_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="160" height="20" uuid="b37db537-1e01-4445-be39-c41152a73bc6"/>
+				<textFieldExpression><![CDATA[$F{e_contactus_contactnumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="160" height="20" uuid="9ffb2a98-2f5f-4969-91d9-d48ab5e02a5b"/>
+				<textFieldExpression><![CDATA[$F{e_contactus_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="160" height="20" uuid="e2b26b2f-44ea-4533-84d3-5cd183d687f1"/>
+				<textFieldExpression><![CDATA[$F{e_contactus_message}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
